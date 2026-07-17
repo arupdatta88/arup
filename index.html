@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arup Datta (Abhi) — Systems Engineer &amp; Technical Project Coordinator</title>
+<meta name="description" content="Arup 'Abhi' Datta — Systems Engineer, Technical Project Coordinator and IT Infrastructure specialist based in Chattogram, Bangladesh. Also writes on technology, politics, human rights and sports.">
+<link rel="icon" type="image/jpeg" href="profile.jpg">
+<link rel="apple-touch-icon" href="profile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0A101E;
+    --bg-alt: #0D1526;
+    --panel: #121B2E;
+    --panel-2: #16203A;
+    --panel-warm: #1B2338;
+    --border: rgba(237,238,243,0.09);
+    --border-strong: rgba(237,238,243,0.16);
+    --text: #ECEEF3;
+    --text-muted: #8B93A8;
+    --text-faint: #616A80;
+    --amber: #F2A93B;
+    --amber-dim: #7A5C29;
+    --cyan: #3FD6C6;
+    --cyan-dim: #1F5C55;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+    --maxw: 1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(63,214,198,0.08), transparent 60%),
+      radial-gradient(ellipse 900px 600px at 90% 10%, rgba(242,169,59,0.06), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  :focus-visible{outline:2px solid var(--cyan); outline-offset:3px;}
+
+  /* ---------- Nav ---------- */
+  header.site{
+    position:sticky; top:0; z-index:100;
+    background:rgba(10,16,30,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px; max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .brand-mark{
+    width:36px; height:36px; border-radius:9px;
+    background:linear-gradient(145deg, var(--panel-2), var(--panel));
+    border:1px solid var(--border-strong);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-weight:600; font-size:13px; color:var(--cyan);
+    overflow:hidden; flex-shrink:0;
+  }
+  .brand-mark img{width:100%; height:100%; object-fit:cover;}
+  .brand-text{font-family:var(--sans); font-weight:600; font-size:16px; letter-spacing:0.2px;}
+  .brand-text span{color:var(--text-muted); font-weight:400; font-size:13px; display:block; margin-top:1px;}
+  nav.links{display:flex; gap:28px; align-items:center;}
+  nav.links a{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--text-muted); text-decoration:none; transition:color .15s ease;
+  }
+  nav.links a:hover{color:var(--cyan);}
+  .nav-cta{
+    font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--bg) !important; background:var(--cyan); padding:9px 16px; border-radius:6px;
+    text-decoration:none; font-weight:600; white-space:nowrap;
+  }
+  .nav-cta:hover{background:#5be3d4;}
+  .burger{display:none; background:none; border:1px solid var(--border-strong); border-radius:6px; width:38px;height:38px; color:var(--text); cursor:pointer;}
+  .mobile-panel{display:none; flex-direction:column; gap:2px; padding:8px 28px 18px; border-top:1px solid var(--border);}
+  .mobile-panel a{
+    font-family:var(--mono); font-size:13px; text-transform:uppercase; letter-spacing:.04em;
+    color:var(--text-muted); text-decoration:none; padding:12px 4px; border-bottom:1px solid var(--border);
+  }
+  .mobile-panel.open{display:flex;}
+
+  @media (max-width:860px){
+    nav.links{display:none;}
+    .nav-cta{display:none;}
+    .burger{display:flex; align-items:center; justify-content:center;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:76px 0 40px; position:relative; overflow:hidden;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--cyan); display:flex; align-items:center; gap:10px; margin-bottom:22px;
+  }
+  .eyebrow .rule{width:34px; height:1px; background:var(--cyan); opacity:.6;}
+  h1.name{
+    font-family:var(--sans); font-weight:700; font-size:clamp(40px,7vw,74px);
+    line-height:1.02; margin:0 0 6px; letter-spacing:-0.02em;
+  }
+  .nickname{
+    font-family:var(--serif); font-style:italic; color:var(--amber); font-size:clamp(18px,2.4vw,24px);
+    margin:0 0 22px; font-weight:500;
+  }
+  .role-line{
+    font-family:var(--mono); font-size:clamp(13px,1.6vw,15.5px); color:var(--text-muted);
+    letter-spacing:.02em; margin:0 0 26px; max-width:640px;
+  }
+  .role-line b{color:var(--text); font-weight:500;}
+  .lede{
+    font-family:var(--serif); font-size:clamp(17px,2vw,20px); line-height:1.6; color:#D6D9E2;
+    max-width:640px; margin:0 0 34px;
+  }
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px;}
+  .btn{
+    font-family:var(--mono); font-size:13px; letter-spacing:.03em; text-transform:uppercase;
+    padding:13px 22px; border-radius:7px; text-decoration:none; font-weight:600;
+    display:inline-flex; align-items:center; gap:8px; transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn-primary{background:var(--amber); color:#1B1305;}
+  .btn-primary:hover{background:#ffbf5c; transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--border-strong); color:var(--text);}
+  .btn-ghost:hover{border-color:var(--cyan); color:var(--cyan); transform:translateY(-1px);}
+  .btn-whatsapp{border:1px solid var(--cyan-dim); color:var(--cyan);}
+  .btn-whatsapp:hover{background:rgba(63,214,198,0.1);}
+
+  /* status ribbon — signature element */
+  .status-ribbon{
+    display:flex; flex-wrap:wrap; gap:0; border:1px solid var(--border); border-radius:10px;
+    overflow:hidden; background:var(--panel);
+  }
+  .status-item{
+    flex:1 1 150px; padding:14px 18px; border-right:1px solid var(--border);
+    font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint);
+  }
+  .status-item:last-child{border-right:none;}
+  .status-item .val{
+    display:block; margin-top:5px; font-size:13px; color:var(--text); text-transform:none; letter-spacing:0;
+  }
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--cyan); display:inline-block; margin-right:7px;
+    box-shadow:0 0 0 0 rgba(63,214,198,.6); animation:pulse 2s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(63,214,198,.55);}
+    70%{box-shadow:0 0 0 8px rgba(63,214,198,0);}
+    100%{box-shadow:0 0 0 0 rgba(63,214,198,0);}
+  }
+
+  /* ---------- Sections generic ---------- */
+  section{padding:88px 0;}
+  .section-head{margin-bottom:44px; max-width:640px;}
+  .kicker{
+    font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--amber); margin-bottom:12px; display:block;
+  }
+  h2.title{font-family:var(--sans); font-weight:700; font-size:clamp(28px,4vw,38px); margin:0 0 14px; letter-spacing:-0.01em;}
+  .section-sub{color:var(--text-muted); font-size:15.5px; line-height:1.6;}
+  hr.hairline{border:none; border-top:1px solid var(--border); margin:0;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid; grid-template-columns:230px 1fr; gap:56px; align-items:start;}
+  .avatar-node{
+    width:200px; height:200px; border-radius:16px; border:1px solid var(--border-strong);
+    background:radial-gradient(circle at 35% 25%, var(--panel-2), var(--panel) 70%);
+    display:flex; align-items:center; justify-content:center; position:relative;
+    overflow:hidden;
+  }
+  .avatar-node img{width:100%; height:100%; object-fit:cover; border-radius:15px;}
+  .avatar-node::before{
+    content:''; position:absolute; inset:-1px; border-radius:16px; padding:1px;
+    background:linear-gradient(135deg, rgba(63,214,198,.5), transparent 40%, rgba(242,169,59,.4));
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none;
+  }
+  .about-text p{font-family:var(--serif); font-size:16.5px; line-height:1.75; color:#D3D6DF; margin:0 0 18px;}
+  .about-aside{
+    margin-top:22px; padding:16px 18px; border-left:2px solid var(--amber); background:rgba(242,169,59,0.05);
+    font-family:var(--serif); font-style:italic; font-size:15px; color:#D9C79A; line-height:1.6; border-radius:0 8px 8px 0;
+  }
+  .fact-list{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;}
+  .fact{
+    font-family:var(--mono); font-size:12px; color:var(--text-muted); border:1px solid var(--border);
+    padding:8px 12px; border-radius:6px; background:var(--panel);
+  }
+  .fact b{color:var(--text); font-weight:500;}
+
+  @media (max-width:760px){
+    .about-grid{grid-template-columns:1fr; gap:28px;}
+    .avatar-node{width:120px; height:120px;}
+    .avatar-node .initials{font-size:36px;}
+  }
+
+  /* ---------- Skills ---------- */
+  .chip-cloud{display:flex; flex-wrap:wrap; gap:10px;}
+  .chip{
+    font-family:var(--mono); font-size:12.5px; padding:9px 14px; border-radius:20px;
+    border:1px solid var(--border-strong); color:var(--text-muted); background:var(--panel);
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .chip:hover{border-color:var(--cyan); color:var(--cyan);}
+
+  /* ---------- Experience — traceroute ---------- */
+  .trace-console{
+    background:var(--bg-alt); border:1px solid var(--border-strong); border-radius:10px;
+    padding:18px 22px; font-family:var(--mono); font-size:12px; color:var(--text-faint);
+    margin-bottom:36px; overflow-x:auto; white-space:nowrap;
+  }
+  .trace-console .prompt{color:var(--cyan);}
+  .trace-console .cmd{color:var(--text-muted);}
+  .hops{position:relative; padding-left:34px;}
+  .hops::before{content:''; position:absolute; left:9px; top:8px; bottom:8px; width:1px; background:var(--border-strong);}
+  .hop{position:relative; padding-bottom:44px;}
+  .hop:last-child{padding-bottom:0;}
+  .hop-num{
+    position:absolute; left:-34px; top:0; width:19px; height:19px; border-radius:50%;
+    background:var(--bg); border:1px solid var(--cyan); display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:9.5px; color:var(--cyan);
+  }
+  .hop.current .hop-num{background:var(--cyan); color:var(--bg); border-color:var(--cyan);}
+  .hop-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; margin-bottom:4px;}
+  .hop-role{font-family:var(--sans); font-weight:600; font-size:19px;}
+  .hop-time{font-family:var(--mono); font-size:11.5px; color:var(--amber); letter-spacing:.03em;}
+  .hop-company{font-family:var(--serif); font-style:italic; color:var(--text-muted); font-size:14.5px; margin-bottom:12px;}
+  .hop ul{margin:0; padding-left:18px; color:#C9CCD8; font-size:14.5px; line-height:1.7;}
+  .hop li{margin-bottom:6px;}
+  .badge-status{
+    font-family:var(--mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
+    padding:3px 8px; border-radius:4px; border:1px solid var(--border-strong); color:var(--text-faint);
+  }
+  .hop.current .badge-status{color:var(--cyan); border-color:var(--cyan-dim); background:rgba(63,214,198,.08);}
+
+  /* ---------- Education / Certs ---------- */
+  .edu-cert-grid{display:grid; grid-template-columns:1.1fr 1.4fr; gap:40px;}
+  .edu-card{
+    border:1px solid var(--border); border-radius:10px; padding:26px; background:var(--panel);
+  }
+  .edu-card .deg{font-family:var(--sans); font-weight:600; font-size:17px; margin-bottom:6px;}
+  .edu-card .school{font-family:var(--serif); font-style:italic; color:var(--text-muted); font-size:14.5px;}
+  .lang-row{margin-top:20px; padding-top:18px; border-top:1px solid var(--border); font-family:var(--mono); font-size:12px; color:var(--text-muted);}
+  .lang-row b{color:var(--text); font-weight:500;}
+  .cert-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .cert{
+    border:1px solid var(--border); border-radius:8px; padding:14px 16px; background:var(--panel);
+    display:flex; align-items:center; gap:12px;
+  }
+  .cert-abbr{
+    font-family:var(--mono); font-weight:600; font-size:12px; color:var(--bg); background:var(--amber);
+    padding:4px 7px; border-radius:5px; letter-spacing:.02em; flex-shrink:0;
+  }
+  .cert-name{font-size:12.5px; color:var(--text-muted); line-height:1.4;}
+  @media (max-width:760px){ .edu-cert-grid{grid-template-columns:1fr;} .cert-grid{grid-template-columns:1fr;} }
+
+  /* ---------- Writing / masthead ---------- */
+  .masthead{
+    background:var(--panel-warm); border:1px solid var(--border); border-radius:14px; padding:44px;
+  }
+  .masthead-top{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:14px; border-bottom:1px solid var(--border-strong); padding-bottom:20px; margin-bottom:28px;}
+  .masthead-title{font-family:var(--serif); font-weight:700; font-size:clamp(24px,3.4vw,32px);}
+  .masthead-issue{font-family:var(--mono); font-size:11px; color:var(--text-faint); letter-spacing:.06em; text-transform:uppercase;}
+  .masthead-intro{font-family:var(--serif); font-size:16px; line-height:1.75; color:#D6D9E2; max-width:680px; margin-bottom:34px;}
+  .masthead-intro .dropcap{
+    float:left; font-family:var(--serif); font-weight:700; font-size:56px; line-height:0.8;
+    padding:6px 10px 0 0; color:var(--amber);
+  }
+  .topic-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .topic-card{
+    border:1px solid var(--border); border-radius:10px; padding:20px; background:rgba(10,16,30,0.35);
+  }
+  .topic-tag{
+    display:inline-block; font-family:var(--mono); font-size:10px; letter-spacing:.07em; text-transform:uppercase;
+    color:var(--bg); background:var(--cyan); padding:3px 9px; border-radius:4px; margin-bottom:12px; font-weight:600;
+  }
+  .topic-card h3{font-family:var(--sans); font-size:16.5px; margin:0 0 8px;}
+  .topic-card p{font-family:var(--serif); font-size:14px; color:var(--text-muted); line-height:1.6; margin:0;}
+  .writing-note{
+    margin-top:30px; padding-top:24px; border-top:1px solid var(--border-strong);
+    font-family:var(--mono); font-size:12.5px; color:var(--text-faint); display:flex; justify-content:center; align-items:center;
+  }
+  @media (max-width:760px){ .topic-grid{grid-template-columns:1fr;} .masthead{padding:26px;} }
+
+  /* ---------- Services ---------- */
+  .service-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+  .service-card{
+    border:1px solid var(--border); border-radius:12px; padding:28px; background:var(--panel);
+    transition:border-color .18s ease, transform .18s ease;
+  }
+  .service-card:hover{border-color:var(--amber); transform:translateY(-2px);}
+  .service-num{font-family:var(--mono); font-size:11px; color:var(--amber); letter-spacing:.06em; margin-bottom:14px; display:block;}
+  .service-card h3{font-family:var(--sans); font-size:18px; margin:0 0 10px;}
+  .service-card p{color:var(--text-muted); font-size:14.5px; line-height:1.65; margin:0;}
+  @media (max-width:760px){ .service-grid{grid-template-columns:1fr;} }
+
+  footer{padding:36px 0 50px; border-top:1px solid var(--border);}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+  .foot-brand{font-family:var(--mono); font-size:12px; color:var(--text-faint);}
+  .foot-links{display:flex; gap:20px;}
+  .foot-links a{font-family:var(--mono); font-size:12px; color:var(--text-muted); text-decoration:none;}
+  .foot-links a:hover{color:var(--cyan);}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark"><img src="profile.jpg" alt="Arup Datta"></span>
+      <span class="brand-text">Arup Datta<span>aka Abhi — Systems Engineer</span></span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#writing">Writing</a>
+      <a href="#services">Services</a>
+    </nav>
+    <a href="mailto:arup281@gmail.com" class="nav-cta">Hire Me</a>
+    <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#writing">Writing</a>
+    <a href="#services">Services</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span class="rule"></span> IT INFRASTRUCTURE &amp; NETWORK OPERATIONS · CHATTOGRAM, BANGLADESH</div>
+      <h1 class="name">Arup Datta</h1>
+      <p class="nickname">everyone calls me Abhi</p>
+      <p class="role-line"><b>Systems Engineer</b> · <b>Technical Project Coordinator</b> · <b>NOC &amp; IT Infrastructure Specialist</b></p>
+      <p class="lede">Ten-plus years keeping networks online, projects on schedule, and the people on both sides of a technical conversation actually understanding each other. Currently coordinating IT/ITES delivery for clients across Bangladesh — open to full-time roles and freelance engagements.</p>
+
+      <div class="cta-row">
+        <a href="Arup_Datta_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">↓ Download Résumé</a>
+        <a href="https://wa.me/8801919274914?text=Hi%20Abhi%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2C6.501 2 2 6.477 2 12c0 1.85.505 3.622 1.47 5.171L2 22l4.943-1.437A9.99 9.99 0 0 0 12.05 22C17.6 22 22.1 17.523 22.1 12S17.6 2 12.05 2zm0 18.06c-1.732 0-3.395-.484-4.836-1.4l-.347-.213-3.017.877.905-2.943-.226-.36A8.01 8.01 0 0 1 4.02 12c0-4.436 3.61-8.04 8.03-8.04 4.42 0 8.03 3.604 8.03 8.04 0 4.435-3.61 8.06-8.03 8.06z"/></svg>
+          WhatsApp Me
+        </a>
+        <a href="mailto:arup281@gmail.com" class="btn btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          Get in Touch
+        </a>
+      </div>
+
+      <div class="status-ribbon reveal">
+        <div class="status-item"><span class="dot"></span>STATUS<span class="val">Open to work</span></div>
+        <div class="status-item">EXPERIENCE<span class="val">10+ years</span></div>
+        <div class="status-item">BASE<span class="val">Chattogram, BD</span></div>
+        <div class="status-item">LOCAL TIME (GMT+6)<span class="val" id="localTime">--:--:--</span></div>
+        <div class="status-item">SESSION UPTIME<span class="val" id="uptime">00:00:00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="avatar-node"><img src="profile.jpg" alt="Arup 'Abhi' Datta"></div>
+          <div class="fact-list">
+            <span class="fact"><b>38</b> years old</span>
+            <span class="fact">Married, <b>1 child</b></span>
+            <span class="fact">Bengali &amp; <b>English</b></span>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="kicker">About</span>
+          <h2 class="title">Results-driven, and results-documented.</h2>
+          <div class="about-text">
+            <p>I'm a Systems Engineer and Technical Project Coordinator with over a decade of experience spanning network engineering, IT operations, and end-to-end IT/ITES project delivery. Most of that time has been spent doing two things at once: keeping infrastructure reliable, and keeping the humans around that infrastructure — clients, developers, and stakeholders — on the same page.</p>
+            <p>I'm comfortable being the primary point of contact on a project: gathering requirements, writing the documentation nobody wants to write, running the incident call at 2am, and translating what happened into language a non-technical stakeholder can act on. I care about things finishing on time, in scope, and explained clearly afterward.</p>
+          </div>
+          <div class="about-aside">
+            "At 38, I've learned that the best systems — technical or otherwise — are the ones you document well enough that someone else can trust them." Off the clock, I'm a husband and father of one, based in Chattogram, Bangladesh, usually with a notebook of story ideas nearby.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Core Competencies</span>
+        <h2 class="title">What I bring to a project</h2>
+        <p class="section-sub">The overlap of hands-on technical skill and the coordination work that keeps a project moving.</p>
+      </div>
+      <div class="chip-cloud reveal">
+        <span class="chip">IT Project Coordination &amp; Management</span>
+        <span class="chip">Systems &amp; Network Engineering</span>
+        <span class="chip">IT Infrastructure Administration</span>
+        <span class="chip">Stakeholder &amp; Client Communication</span>
+        <span class="chip">Requirements Gathering</span>
+        <span class="chip">Incident &amp; Root Cause Analysis</span>
+        <span class="chip">Network Monitoring &amp; NOC Operations</span>
+        <span class="chip">Technical Documentation &amp; Reporting</span>
+        <span class="chip">Cross-Functional Team Collaboration</span>
+        <span class="chip">IT Support &amp; Troubleshooting</span>
+        <span class="chip">Vendor &amp; SLA Management</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Experience</span>
+        <h2 class="title">Career, traced hop by hop</h2>
+        <p class="section-sub">From overnight NOC monitoring to leading client-facing IT project coordination — the route so far.</p>
+      </div>
+
+      <div class="trace-console reveal"><span class="prompt">abhi@career</span><span class="cmd"> ~$ traceroute --from 2013 --to present</span></div>
+
+      <div class="hops">
+        <div class="hop reveal">
+          <div class="hop-num">1</div>
+          <div class="hop-head">
+            <span class="hop-role">Senior Network Engineer (NOC)</span>
+            <span class="hop-time">2013 – 2016</span>
+            <span class="badge-status">Complete</span>
+          </div>
+          <div class="hop-company">AKCEYCOM Limited — Dhaka, Bangladesh</div>
+          <ul>
+            <li>Monitored core network infrastructure 24/7 from the Network Operations Centre, tracking performance metrics and responding swiftly to incidents to maintain system uptime.</li>
+            <li>Performed proactive troubleshooting, root cause analysis, and resolution of network issues in a high-pressure, time-sensitive environment.</li>
+            <li>Implemented network monitoring tools and processes that improved infrastructure reliability and performance.</li>
+            <li>Collaborated with cross-functional teams to support network optimization initiatives and infrastructure projects.</li>
+          </ul>
+        </div>
+
+        <div class="hop reveal">
+          <div class="hop-num">2</div>
+          <div class="hop-head">
+            <span class="hop-role">Senior Executive (IT)</span>
+            <span class="hop-time">2017 – 2020</span>
+            <span class="badge-status">Complete</span>
+          </div>
+          <div class="hop-company">Genex Infosys Limited — Chattogram, Bangladesh</div>
+          <ul>
+            <li>Supported day-to-day IT operations, applying networking and systems administration expertise to maintain secure, stable, high-performing infrastructure.</li>
+            <li>Monitored and troubleshot network and system issues to minimize downtime and ensure operational continuity.</li>
+            <li>Collaborated with internal teams to implement BPO technology solutions and process improvements.</li>
+            <li>Contributed to IT documentation and knowledge-sharing initiatives that improved team efficiency and onboarding.</li>
+          </ul>
+        </div>
+
+        <div class="hop current reveal">
+          <div class="hop-num">3</div>
+          <div class="hop-head">
+            <span class="hop-role">Lead Project Coordinator (IT)</span>
+            <span class="hop-time">2021 – Present</span>
+            <span class="badge-status">● Online now</span>
+          </div>
+          <div class="hop-company">KAR Communications (Operational Partner of HelloWorld Communications Ltd.) — Chattogram, Bangladesh</div>
+          <ul>
+            <li>Coordinate end-to-end IT/ITES projects, aligning technical teams, timelines, and stakeholders to deliver infrastructure and technology solutions on schedule and within scope.</li>
+            <li>Serve as primary point of contact for clients — managing communication through emails, presentations, and meetings to gather requirements and provide status updates.</li>
+            <li>Facilitate coordination between development teams and clients, resolving issues promptly and maintaining clear documentation across the full project lifecycle.</li>
+            <li>Prepare technical documentation, status reports, and stakeholder presentations to support planning, progress tracking, and knowledge transfer.</li>
+            <li>Apply project management best practices to keep complex, multi-stakeholder initiatives on track while upholding quality and client satisfaction.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <!-- EDUCATION & CERTS -->
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Education &amp; Certifications</span>
+        <h2 class="title">Credentials behind the uptime</h2>
+      </div>
+      <div class="edu-cert-grid">
+        <div class="edu-card reveal">
+          <div class="deg">B.Eng., Computer Science &amp; Engineering</div>
+          <div class="school">University of Chittagong, Chattogram, Bangladesh</div>
+          <div class="lang-row"><b>Languages:</b> English — Fluent (IELTS Band 8.0) · Bengali — Native</div>
+        </div>
+        <div class="cert-grid reveal">
+          <div class="cert"><span class="cert-abbr">CCNA</span><span class="cert-name">Cisco Certified Network Associate</span></div>
+          <div class="cert"><span class="cert-abbr">MTCNA</span><span class="cert-name">MikroTik Certified Network Associate</span></div>
+          <div class="cert"><span class="cert-abbr">MTCRE</span><span class="cert-name">MikroTik Certified Routing Engineer</span></div>
+          <div class="cert"><span class="cert-abbr">RHCSA</span><span class="cert-name">Red Hat Certified System Administrator</span></div>
+          <div class="cert" style="grid-column:1/-1;"><span class="cert-abbr">KESC</span><span class="cert-name">Kaspersky Endpoint Security Course</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Beyond the Console</span>
+        <h2 class="title">Also — I write.</h2>
+        <p class="section-sub">A second, quieter skill set: turning complicated subjects into pieces people actually want to read.</p>
+      </div>
+
+      <div class="masthead reveal">
+        <div class="masthead-top">
+          <div class="masthead-title">Field Notes, by Abhi</div>
+          <div class="masthead-issue">Byline · Freelance Contributor</div>
+        </div>
+        <p class="masthead-intro"><span class="dropcap">W</span>hen I'm not deep in a network diagram, I'm usually writing — an instinct that grew out of years spent explaining technical situations to non-technical people. I write agile, well-researched pieces across a range of subjects, and I'm comfortable adapting tone and depth for a client's audience, from explainer articles to opinion pieces.</p>
+
+        <div class="topic-grid">
+          <div class="topic-card">
+            <span class="topic-tag">Technology</span>
+            <h3>Infrastructure &amp; the everyday internet</h3>
+            <p>Networking, systems administration, and how the invisible plumbing of the internet actually works — written for readers who aren't engineers.</p>
+          </div>
+          <div class="topic-card">
+            <span class="topic-tag">Politics</span>
+            <h3>Policy, power, and process</h3>
+            <p>Clear-eyed commentary on political developments in Bangladesh and beyond, aimed at readers who want context, not noise.</p>
+          </div>
+          <div class="topic-card">
+            <span class="topic-tag">Human Rights</span>
+            <h3>Dignity, in the details</h3>
+            <p>Pieces on human rights issues that connect policy-level decisions to their on-the-ground impact on ordinary people.</p>
+          </div>
+          <div class="topic-card">
+            <span class="topic-tag">Sports</span>
+            <h3>The game beyond the scoreline</h3>
+            <p>Cricket and football coverage that goes past the result — tactics, storylines, and what a match means to the people watching it.</p>
+          </div>
+        </div>
+
+        <div class="writing-note">
+          <a href="https://www.linkedin.com/in/arup281/" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:8px 16px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.56V9h3.554v11.452z"/></svg>
+            Connect Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Services</span>
+        <h2 class="title">How I can help</h2>
+        <p class="section-sub">Available for full-time roles, contract work, and freelance projects — technical or editorial.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <span class="service-num">01</span>
+          <h3>IT Infrastructure &amp; Network Engineering</h3>
+          <p>Design, deployment, monitoring, and hardening of network and systems infrastructure — backed by CCNA, MTCNA, MTCRE, and RHCSA certifications.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-num">02</span>
+          <h3>Technical Project Coordination</h3>
+          <p>End-to-end coordination of IT/ITES projects: requirements gathering, stakeholder liaison, timelines, and delivery — keeping every party aligned.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-num">03</span>
+          <h3>NOC &amp; Systems Support</h3>
+          <p>24/7-minded monitoring, incident response, root-cause analysis, and vendor/SLA management for teams that can't afford downtime.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-num">04</span>
+          <h3>Freelance Technical &amp; Feature Writing</h3>
+          <p>Articles and long-form content across technology, politics, human rights, and sports — researched, clearly written, and delivered on deadline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="foot-brand">© <span id="year"></span> Arup "Abhi" Datta — Chattogram, Bangladesh</div>
+    <div class="foot-links">
+      <a href="mailto:arup281@gmail.com">Email</a>
+      <a href="https://wa.me/8801919274914" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/arup281/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Arup_Datta_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const burger = document.getElementById('burgerBtn');
+  const panel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', () => {
+    const open = panel.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // local time in Chattogram (GMT+6)
+  function updateLocalTime(){
+    const el = document.getElementById('localTime');
+    if(!el) return;
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
+    const hh = String(now.getHours()).padStart(2,'0');
+    const mm = String(now.getMinutes()).padStart(2,'0');
+    const ss = String(now.getSeconds()).padStart(2,'0');
+    el.textContent = `${hh}:${mm}:${ss}`;
+  }
+  updateLocalTime();
+  setInterval(updateLocalTime, 1000);
+
+  // playful session uptime counter
+  let seconds = 0;
+  const uptimeEl = document.getElementById('uptime');
+  function fmt(s){
+    const h = String(Math.floor(s/3600)).padStart(2,'0');
+    const m = String(Math.floor((s%3600)/60)).padStart(2,'0');
+    const sec = String(s%60).padStart(2,'0');
+    return `${h}:${m}:${sec}`;
+  }
+  setInterval(() => { seconds++; if(uptimeEl) uptimeEl.textContent = fmt(seconds); }, 1000);
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
