@@ -9,7 +9,7 @@ A static, single-page portfolio site. No build step, no dependencies — just HT
 - `Arup_Datta_Resume.pdf` — downloadable résumé (linked from the site)
 - `vercel.json` — deployment config (clean URLs + asset caching)
 
-Keep all four files together in the same folder — the page references the image and PDF by relative path.
+Keep all four files together in the same folder — the page references the image and PDF by relative path. Don't forget this.
 
 ## Deploy to Vercel
 
